@@ -206,7 +206,7 @@ const MultiSelectDropdown = (params) => {
         'background-position': 'right 6px center',
         'background-size': '16px 12px',
         'min-width': `${config.minWidth}` ?? '140px',
-        'max-width': `${config.maxWidth}` ?? '360px',
+        'width': `${config.width}` ?? '360px',
         cursor: 'pointer'
       },
       'span.optext, span.placeholder': {
