@@ -108,8 +108,6 @@ const MultiSelectDropdown = (params) => {
       div.dropdownListWrapper = dropdownListWrapper;
 
       div.refresh = () => {
-        // For demo purposes, remove
-        let tempSelectedList = document.getElementById('dropdownSelected');
 
         div.querySelectorAll('span.optext, span.placeholder').forEach((placeholder) => div.removeChild(placeholder));
         let selected = Array.from(multiSelect.selectedOptions);
@@ -120,11 +118,6 @@ const MultiSelectDropdown = (params) => {
               text: selected.length + ' ' + config.txtSelected
             })
           );
-          // For demo purposes, remove
-          tempSelectedList
-            .querySelectorAll('span')
-            .forEach((span, index) => index !== 0 && tempSelectedList.removeChild(span));
-          selected.map((option) => tempSelectedList.appendChild(newElement('span', { text: option.text })));
         } else {
 
           selected.map((option) => {
