@@ -8,7 +8,7 @@ const MultiSelectDropdown = (params) => {
     txtAll: 'All',
     txtRemove: 'Remove',
     txtSearch: 'Search...',
-    minWidth: '175px',
+    minWidth: '100px',
     width: '100%',
     maxHeight: '180px',
     borderRadius: 6,
