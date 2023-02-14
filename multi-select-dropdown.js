@@ -126,10 +126,6 @@ const MultiSelectDropdown = (params) => {
             .forEach((span, index) => index !== 0 && tempSelectedList.removeChild(span));
           selected.map((option) => tempSelectedList.appendChild(newElement('span', { text: option.text })));
         } else {
-          // For demo purposes, remove
-          tempSelectedList
-            .querySelectorAll('span')
-            .forEach((span, index) => index !== 0 && tempSelectedList.removeChild(span));
 
           selected.map((option) => {
             let span = newElement('span', {
@@ -152,8 +148,6 @@ const MultiSelectDropdown = (params) => {
               );
             }
             div.appendChild(span);
-            // For demo purposes, remove
-            tempSelectedList.appendChild(newElement('span', { text: option.text }));
           });
         }
         if (multiSelect.selectedOptions?.length === 0) {
@@ -163,8 +157,6 @@ const MultiSelectDropdown = (params) => {
               text: multiSelect.attributes?.placeholder?.value ?? config.placeholder
             })
           );
-          // For demo purposes, remove
-          tempSelectedList.appendChild(newElement('span', { text: 'n/a' }));
         }
       };
       div.refresh();
