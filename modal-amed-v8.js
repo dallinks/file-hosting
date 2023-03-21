@@ -1,5 +1,5 @@
 if(!document.querySelector('#InterestButton')){  
-  const interestButton = document.getElementById('InterestButton2');
+  const interestButton = document.getElementById('SubmitButton');
   const modal = document.querySelector('.modal');
   interestButton.addEventListener('click', function submitButton(){
     if((document.getElementById('name').value) == '' || (document.getElementById('email').value) == '' || (document.getElementById('phone').value) == ''){
