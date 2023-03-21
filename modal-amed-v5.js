@@ -35,9 +35,6 @@ if(!document.querySelector('#InterestButton')){
         "licenseStateList" : licenseList
       })
         .then((item) => {console.log(item)})
-        .then(() => {
-        changeButton();
-      });
       }
     });
 
@@ -46,8 +43,4 @@ if(!document.querySelector('#InterestButton')){
       document.querySelector('.image-6').click();
     }
   });
-
-  backButton.addEventListener('click', () => {
-  history.back();
-  })
 }
