@@ -123,7 +123,7 @@ if(!document.querySelector('#InterestButton')){
         "Email": document.querySelector('.text-field-7').value,
         "FirstName": (JSON.parse(localStorage.getItem('clinician'))).firstName,
         "LastName": (JSON.parse(localStorage.getItem('clinician'))).lastName,
-        "LeadSpecialty": map2.get(document.querySelector('#specialty-dropdown').value),
+        "SpecialtyList": map2.get(document.querySelector('#specialty-dropdown').value),
         "Phone": document.querySelector('.text-field-6').value,
         "PreferredContactMethod": "text",
         "Source" : "AC Interested",
