@@ -41,7 +41,6 @@ if(!document.querySelector('#InterestButton')){
         "LeadSpecialty": 2000156,
         "Phone": document.querySelector('.text-field-6').value,
         "PreferredContactMethod": "text",
-        "LeadPreferredLocation": preferredLocation,
         "Source" : "AC Interested",
         "licenseStateList" : licenseList
       })
