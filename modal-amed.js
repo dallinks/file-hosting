@@ -1,4 +1,4 @@
-if(document.querySelector('.modal'){  
+if(document.querySelector('#interestButton'){  
   const submitButton = document.getElementById('SubmitButton');
   submitButton.addEventListener('click', function submitButton(){
     if((document.getElementById('name').value) == '' || (document.getElementById('email').value) == '' || (document.getElementById('phone').value) == ''){
