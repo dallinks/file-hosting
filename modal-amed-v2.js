@@ -1,6 +1,6 @@
 if(!document.querySelector('#InterestButton')){  
   const interestButton = document.getElementById('InterestButton2');
-  submitButton.addEventListener('click', function submitButton(){
+  interestButton.addEventListener('click', function submitButton(){
     if((document.getElementById('name').value) == '' || (document.getElementById('email').value) == '' || (document.getElementById('phone').value) == ''){
       return
     }
