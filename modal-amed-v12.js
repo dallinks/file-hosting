@@ -38,7 +38,7 @@ if(!document.querySelector('#InterestButton')){
         "Email": document.querySelector('.text-field-7').value,
         "FirstName": (JSON.parse(localStorage.getItem('clinician'))).firstName,
         "LastName": (JSON.parse(localStorage.getItem('clinician'))).lastName,
-        "LeadSpecialty": specialty,
+        "LeadSpecialty": 2000156,
         "Phone": document.querySelector('.text-field-6').value,
         "PreferredContactMethod": "text",
         "LeadPreferredLocation": preferredLocation,
