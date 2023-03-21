@@ -126,7 +126,7 @@ if(!document.querySelector('#InterestButton')){
         "SpecialtyList": map2.get(document.querySelector('#specialty-dropdown').value),
         "Phone": document.querySelector('.text-field-6').value,
         "PreferredContactMethod": "text",
-        "Source" : "AC Interested",
+        "Source" : "RecInterested",
         "licenseStateList" : licenseList
       })
         .then((item) => {console.log(item)})
