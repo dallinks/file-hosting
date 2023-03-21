@@ -1,6 +1,7 @@
 if(!document.querySelector('#InterestButton')){  
   const interestButton = document.getElementById('InterestButton2');
   const modal = document.querySelector('.modal');
+  modal.style.display = 'flex';
   interestButton.addEventListener('click', function submitButton(){
     if((document.getElementById('name').value) == '' || (document.getElementById('email').value) == '' || (document.getElementById('phone').value) == ''){
       return
