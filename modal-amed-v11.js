@@ -1,4 +1,17 @@
 if(!document.querySelector('#InterestButton')){  
+   async function postData( data = {} ) {
+      const response = await fetch('https://api.connect.advantismed.com/User/registercandidatelead', {
+        method : 'POST',
+        mode : 'cors',
+        headers: {
+        'Content-Type': 'application/json',
+        'Host' : 'api.connect.advantismed.com',
+        'Content-Length' : JSON.stringify(data).length
+		},
+		body : JSON.stringify(data)
+		});
+	return response;
+  }
   const interestButton = document.getElementById('SubmitButton');
   const modal = document.querySelector('.modal');
   interestButton.addEventListener('click', function submitButton(){
@@ -29,7 +42,6 @@ if(!document.querySelector('#InterestButton')){
         "Phone": document.querySelector('.text-field-6').value,
         "PreferredContactMethod": "text",
         "LeadPreferredLocation": preferredLocation,
-        "JobIdList" : [parseInt(jobId)],
         "Source" : "AC Interested",
         "licenseStateList" : licenseList
       })
