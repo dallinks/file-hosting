@@ -1,4 +1,14 @@
 if(!document.querySelector('#InterestButton')){  
+	function changeButton(){
+		const a = document.querySelector('#InterestButton2');
+		a.removeAttribute('href');
+		a.style.textDecoration = 'none';
+		a.style.cursor = 'default';
+		a.innerHTML = 'Info Sent to Recruiter!';
+		a.style.color = 'black';
+		a.style.background = '#EBEBEB';
+		a.style.pointerEvents = 'none';
+	}
    async function postData( data = {} ) {
       const response = await fetch('https://api.connect.advantismed.com/User/registercandidatelead', {
         method : 'POST',
@@ -12,7 +22,7 @@ if(!document.querySelector('#InterestButton')){
 		});
 	return response;
   }
-	    const map2 = new Map([
+	const map2 = new Map([
   ['admin-management',[2000131]],
   ['ambulatory', [2000049,2000090]],
   ['anesthesia-tech',[2000008]],
@@ -99,6 +109,7 @@ if(!document.querySelector('#InterestButton')){
 	]);
   const interestButton = document.getElementById('SubmitButton');
   const modal = document.querySelector('.modal');
+	const clinician = JSON.parse(localStorage.getItem('clinician'));
   interestButton.addEventListener('click', function submitButton(){
     if((document.getElementById('name').value) == '' || (document.getElementById('email').value) == '' || (document.getElementById('phone').value) == ''){
       return
@@ -138,4 +149,7 @@ if(!document.querySelector('#InterestButton')){
       document.querySelector('.image-6').click();
     }
   });
+	if(clinician != null){
+		changeButton();
+	}
 }
