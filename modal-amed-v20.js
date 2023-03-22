@@ -9,6 +9,9 @@ if(!document.querySelector('#InterestButton')){
 		a.style.background = '#EBEBEB';
 		a.style.pointerEvents = 'none';
 		a.style.width = 'unset';
+		a.style.maxWidth = 'unset';
+		a.style.paddingRight = '40px';
+		a.style.paddingLeft = '40px';
 	}
    async function postData( data = {} ) {
       const response = await fetch('https://api.connect.advantismed.com/User/registercandidatelead', {
