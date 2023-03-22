@@ -8,6 +8,7 @@ if(!document.querySelector('#InterestButton')){
 		a.style.color = 'black';
 		a.style.background = '#EBEBEB';
 		a.style.pointerEvents = 'none';
+		a.style.width = 'unset';
 	}
    async function postData( data = {} ) {
       const response = await fetch('https://api.connect.advantismed.com/User/registercandidatelead', {
@@ -140,7 +141,10 @@ if(!document.querySelector('#InterestButton')){
         "Source" : "RecInterested",
         "licenseStateList" : licenseList
       })
-        .then((item) => {console.log(item)})
+        .then((item) => {
+	      console.log(item);
+	      changeButton();
+			})
       }
     });
 
