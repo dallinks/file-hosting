@@ -1,4 +1,5 @@
 if(!document.querySelector('#InterestButton')){  
+	
 	function changeButton(){
 		const a = document.querySelector('#InterestButton2');
 		a.removeAttribute('href');
@@ -7,7 +8,7 @@ if(!document.querySelector('#InterestButton')){
 		a.innerHTML = 'Info Sent to Recruiter!';
 		a.style.color = 'black';
 		a.style.background = '#EBEBEB';
-		a.style.pointerEvents = 'none';
+		a.removeEventListener('click',submitButton)
 		a.style.width = 'unset';
 		a.style.maxWidth = 'unset';
 		a.style.paddingRight = '45px';
@@ -26,7 +27,7 @@ if(!document.querySelector('#InterestButton')){
 		});
 	return response;
   }
-	const map2 = new Map([
+const map2 = new Map([
   ['admin-management',[2000131]],
   ['ambulatory', [2000049,2000090]],
   ['anesthesia-tech',[2000008]],
@@ -111,10 +112,7 @@ if(!document.querySelector('#InterestButton')){
   ['wound-care',[2000147]],
   ['x-ray-tech',[2000193]],
 	]);
-  const interestButton = document.getElementById('SubmitButton');
-  const modal = document.querySelector('.modal');
-	const clinician = JSON.parse(localStorage.getItem('clinician'));
-  interestButton.addEventListener('click', function submitButton(){
+function submitButton(){
     if((document.getElementById('name').value) == '' || (document.getElementById('email').value) == '' || (document.getElementById('phone').value) == ''){
       return
     }
@@ -149,7 +147,11 @@ if(!document.querySelector('#InterestButton')){
 	      changeButton();
 			})
       }
-    });
+    }
+  const interestButton = document.getElementById('SubmitButton');
+  const modal = document.querySelector('.modal');
+  const clinician = JSON.parse(localStorage.getItem('clinician'));
+  interestButton.addEventListener('click', submitButton());
 
   modal.addEventListener('click', function(event) {
     if(event.target.matches('.modal') && !event.target.matches('.form-block-2')){
