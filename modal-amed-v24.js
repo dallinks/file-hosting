@@ -8,7 +8,7 @@ if(!document.querySelector('#InterestButton')){
 		a.innerHTML = 'Info Sent to Recruiter!';
 		a.style.color = 'black';
 		a.style.background = '#EBEBEB';
-		a.removeEventListener('click',submitButton)
+		a.style.pointerEvents = 'none';
 		a.style.width = 'unset';
 		a.style.maxWidth = 'unset';
 		a.style.paddingRight = '45px';
