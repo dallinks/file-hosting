@@ -151,7 +151,7 @@ function submitButton(){
   const interestButton = document.getElementById('SubmitButton');
   const modal = document.querySelector('.modal');
   const clinician = JSON.parse(localStorage.getItem('clinician'));
-  interestButton.addEventListener('click', submitButton());
+  interestButton.addEventListener('click', submitButton);
 
   modal.addEventListener('click', function(event) {
     if(event.target.matches('.modal') && !event.target.matches('.form-block-2')){
