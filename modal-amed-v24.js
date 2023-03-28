@@ -112,7 +112,7 @@ const map2 = new Map([
   ['wound-care',[2000147]],
   ['x-ray-tech',[2000193]],
 	]);
-function submitButton(){
+function submitForm(){
     if((document.getElementById('name').value) == '' || (document.getElementById('email').value) == '' || (document.getElementById('phone').value) == ''){
       return
     }
@@ -151,7 +151,7 @@ function submitButton(){
   const interestButton = document.getElementById('SubmitButton');
   const modal = document.querySelector('.modal');
   const clinician = JSON.parse(localStorage.getItem('clinician'));
-  interestButton.addEventListener('click', submitButton);
+  interestButton.addEventListener('click', submitForm);
 
   modal.addEventListener('click', function(event) {
     if(event.target.matches('.modal') && !event.target.matches('.form-block-2')){
