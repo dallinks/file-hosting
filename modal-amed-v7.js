@@ -131,8 +131,11 @@ async function submitForm(){
       localStorage.setItem('clinician','{"firstName" : "' + (document.querySelector('.text-field-5').value).slice(0,(document.querySelector('.text-field-5').value).indexOf(" ")) + '", "lastName" : "' + (document.querySelector('.text-field-5').value).slice((document.querySelector('.text-field-5').value).indexOf(' ')+1) + '", "phone" : "' + document.querySelector('.text-field-6').value + '", "email" : "' + document.querySelector('.text-field-7').value + '"}');
       var licenseList = [];
       for(let i=0; i<document.querySelector('#licenseSelector').selectedOptions.length;i++){licenseList.push(document.querySelector('#licenseSelector').selectedOptions[i].value)};
-
-      var asdfresponse = await postData({
+	    
+        document.getElementById("wf-form-Candidate-Lead-Submission").style.display = 'none';
+        document.querySelector('.success-message-2').style.display = "block";
+	    
+      var response = await postData({
         "AuthorizationKey" : "43750fe0-fce9-44d9-aa67-3ab6ade4d125",
         "Email": document.querySelector('.text-field-7').value,
         "FirstName": (JSON.parse(localStorage.getItem('clinician'))).firstName,
@@ -143,10 +146,8 @@ async function submitForm(){
         "Source" : "RecInterested",
         "licenseStateList" : licenseList
       })
-        console.log(asdfresponse);
+        console.log(response);
 	changeButton();
-        document.getElementById("wf-form-Candidate-Lead-Submission").style.display = 'none';
-        document.querySelector('.success-message-2').style.display = "block";
       }
     }
   const interestButton = document.getElementById('SubmitButton');
