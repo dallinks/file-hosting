@@ -28,7 +28,7 @@ if(!document.querySelector('#InterestButton')){
 	return response;
   }
 
-function submitForm(){
+async function submitForm(){
 	var map2 = new Map([
 	  ['admin-management',[2000131]],
 	  ['ambulatory', [2000049,2000090]],
@@ -132,7 +132,7 @@ function submitForm(){
       var licenseList = [];
       for(let i=0; i<document.querySelector('#licenseSelector').selectedOptions.length;i++){licenseList.push(document.querySelector('#licenseSelector').selectedOptions[i].value)};
 
-      postData({
+      var asdfresponse = await postData({
         "AuthorizationKey" : "43750fe0-fce9-44d9-aa67-3ab6ade4d125",
         "Email": document.querySelector('.text-field-7').value,
         "FirstName": (JSON.parse(localStorage.getItem('clinician'))).firstName,
@@ -143,10 +143,9 @@ function submitForm(){
         "Source" : "RecInterested",
         "licenseStateList" : licenseList
       })
-        .then((item) => {
-	      console.log(item);
-	      changeButton();
-			})
+        console.log(asdfresponse);
+	changeButton();
+        
       }
     }
   const interestButton = document.getElementById('SubmitButton');
