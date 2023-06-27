@@ -146,7 +146,7 @@ async function submitForm(){
         console.log(asdfresponse);
 	changeButton();
         document.getElementById("wf-form-Candidate-Lead-Submission").style.display = 'none';
-        document.querySelector('.success-message-2).style.display = "block";
+        document.querySelector('.success-message-2').style.display = "block";
       }
     }
   const interestButton = document.getElementById('SubmitButton');
