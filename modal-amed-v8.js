@@ -121,6 +121,7 @@ async function submitForm(){
       return
     }
     else{
+      var checkbox = document.querySelector("#Checkbox").checked;
       name = document.querySelector('.text-field-5').value;
       phone = document.querySelector('.text-field-6').value;
       email = document.querySelector('.text-field-7').value;
@@ -144,7 +145,8 @@ async function submitForm(){
         "Phone": document.querySelector('.text-field-6').value,
         "PreferredContactMethod": "text",
         "Source" : "RecInterested",
-        "licenseStateList" : licenseList
+        "licenseStateList" : licenseList,
+        "SMSOptIn" : checkbox
       })
         console.log(response);
 	changeButton();
