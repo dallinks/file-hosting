@@ -117,7 +117,7 @@ async function submitForm(){
     if((document.getElementById('name').value) == '' || (document.getElementById('email').value) == '' || (document.getElementById('phone').value) == ''){
       return
     }
-    if (/^[-!#$%&'*+0-9=?A-Z^_a-z{|}~](\.?[-!#$%&'*+0-9=?A-Z^_a-z{|}~])*@[a-zA-Z](-?[a-zA-Z0-9])*(\.[a-zA-Z](-?[a-zA-Z0-9])*)+$/.test(document.getElementById('email').value) != true || /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/.test(document.getElementById('phone').value) != true || /^[a-zA-Z.'-]+(?: +[a-zA-Z.'-]+)+$/.test(document.getElementById('name').value) != true || document.querySelector('#licenseSelector').selectedOptions.length == 0 || document.querySelector('#specialty-dropdown').selectedOptions[0].value == ''){
+    if (/^[-!#$%&'*+0-9=?A-Z^_a-z{|}~](\.?[-!#$%&'*+0-9=?A-Z^_a-z{|}~])*@[a-zA-Z](-?[a-zA-Z0-9])*(\.[a-zA-Z](-?[a-zA-Z0-9])*)+$/.test(document.getElementById('email').value) != true || /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/.test(document.getElementById('phone').value) != true || document.getElementById("name").value == "" || document.getElementById("lastName") == "" || document.querySelector('#licenseSelector').selectedOptions.length == 0 || document.querySelector('#specialty-dropdown').selectedOptions[0].value == ''){
       return
     }
     else{
