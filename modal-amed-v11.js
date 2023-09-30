@@ -129,7 +129,7 @@ async function submitForm(){
       const message = document.getElementById('success-modal-message').innerHTML;
       document.getElementById('success-modal-message').innerHTML = message.replace('Clinician,',name);
 
-      localStorage.setItem('clinician','{"firstName" : "' + (document.querySelector('.text-field-5').value).slice(0,(document.querySelector('.text-field-5').value).indexOf(" ")) + '", "lastName" : "' + (document.querySelector('.text-field-5').value).slice((document.querySelector('.text-field-5').value).indexOf(' ')+1) + '", "phone" : "' + document.querySelector('.text-field-6').value + '", "email" : "' + document.querySelector('.text-field-7').value + '"}');
+      localStorage.setItem('clinician','{"firstName" : "' + (document.querySelector('.text-field-5').value) + '", "lastName" : "' + (document.querySelector('#lastName').value) + '", "phone" : "' + document.querySelector('.text-field-6').value + '", "email" : "' + document.querySelector('.text-field-7').value + '"}');
       var licenseList = [];
       for(let i=0; i<document.querySelector('#licenseSelector').selectedOptions.length;i++){licenseList.push(document.querySelector('#licenseSelector').selectedOptions[i].value)};
 	    
